@@ -5,7 +5,9 @@ eta= int(input("Inserisci la tua eta: "))
 
 print(f"Mi chiamo {nome} e ho {eta} anni, il doppio dei miei anni è {eta*2}")
  """
-# Esercizio 1 
+#TIPI DI DATI
+
+""" # Esercizio 1 
 
 x = 7
 y = 3
@@ -29,4 +31,13 @@ print ( x > 5 )
 
 a = 5
 b = 2.5
-print(a+b)
+print(a+b) """
+
+#CASTING
+
+
+num_int = int(input("Inserisci un numero intero: "))
+num_float = float(num_int)
+print(num_float)
+num_str = str(num_int)
+print(f"il tuo numero intero in stringa e' {num_str}")
