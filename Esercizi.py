@@ -218,7 +218,7 @@ numero= int(input("Scegli quante volte ripetere "))
 print(f"l'inizio della parola {parola[:3]} ripetuta {numero} volte è \n {parola[:3]*numero}") """
 
 #Boolean
-anni=int(input("Quanti anni hai? "))
+""" anni=int(input("Quanti anni hai? "))
 patente=str(input("Hai la patente? (si/no) "))
 res=anni >= 18 and patente == "si"
 print(f"Puoi guidare: {bool(res)}") 
@@ -231,8 +231,13 @@ if utente == "Premium":
 elif utente == "Ritardo":
     print("Non puoi entrare in biblioteca")
 else:
-    print("Hai inserito un valore non valido")   
+    print("Hai inserito un valore non valido")    """
 
+#Operazioni aritmetiche
+
+soldi= float(input("Quanti soldi hai? "))
+prezzo= float(input("Quanto costa l'oggetto? "))
+print(f"Hai {soldi} euro, il prezzo dell'oggetto e' {prezzo} euro, puoi comprare: {soldi//prezzo} oggetti e ti restano {soldi%prezzo} euro")
 
 
 
