@@ -35,9 +35,134 @@ print(a+b) """
 
 #CASTING
 
-
+"""
 num_int = int(input("Inserisci un numero intero: "))
 num_float = float(num_int)
 print(num_float)
 num_str = str(num_int)
-print(f"il tuo numero intero in stringa e' {num_str}")
+print(f"il tuo numero intero in stringa e' {num_str}") """
+
+#Esercizi Modulo 1: tipi di dati, casting e variabili
+
+# Esercizio 1 
+""" Creare tre variabili: nome (stringa), età (intero) e città (stringa).
+Stampare le variabili. """
+
+nome = "Lamberto"
+età = 30
+città = "Torino"
+
+print("Mi chiamo ", nome, ", ho ", età, " anni e vivo in ", città)
+
+
+# Esercizio 2
+""" Creare una variabile x, assegnarle un valore e aggiornarla.
+Stampare il valore prima e dopo l'aggiornamento. """
+
+x = 2.5
+print("Prima:", x)
+x = 6
+print("Dopo:", x) 
+
+
+# Esercizio 3
+# Somma di due variabili intere e stampa del risultato.
+
+x = 12
+y = 18
+print("Somma di", x, "e", y, "=", x + y)  
+
+
+# Esercizio 4
+# Scambio dei valori tra due variabili x e y.
+
+x = 15
+y = 11
+
+print("Valori scambiati - prima: ", x, y); 
+x, y = y, x; 
+print("Valori scambiati - dopo: ", x, y)  
+
+
+# Esercizio 5 
+# Calcolo dell'area di un rettangolo utilizzando base e altezza.
+
+base = 5
+altezza = 10
+area = base * altezza
+print("Area rettangolo con base", base, "e altezza", altezza, "e'", area)  
+
+
+# Esercizio 6 
+# Somma di un numero intero con un decimale e stampa del risultato.
+
+a = 12
+b = 23.12
+print("Somma di", a, "e", b, "e'", a + b)  
+
+
+# Esercizio 7
+# Calcolare la media di tre numeri.
+
+x, y, z = 15, 18, 22
+media = (x + y + z) / 3
+print("Media di", x, y, z, "e'", media)  
+
+
+# Esercizio 8 
+# Concatenazione di due stringhe.
+
+s1 = "Mi chiamo "
+s2 = "Lamberto "
+s3 = "e ho 30 anni"
+print("Concatenazione di", s1, "-", s2,"-", s3, "e'", s1 + s2 + s3)  
+
+
+# Esercizio 9 
+# Ripetizione della parola "ciao" tre volte utilizzando una stringa.
+
+print("Ciao " * 3)  
+
+
+# Esercizio 10 
+# Uso di variabili boolean per verificare se un numero è maggiore di un altro.
+
+a = 12
+b = 18
+c = 30 
+print(a < b)
+print(b > c) 
+print(a < c)  
+
+
+# Esercizio 11 
+# Trasformare un intero in un float e stamparlo.
+
+x = 22
+y = float(x)
+print("Il numero float di", x, "e'", y)  
+
+
+# Esercizio 12
+# Convertire un numero in una stringa e stamparlo.
+
+n = 1893
+s = str(n)
+
+print("Il numero in formato stringa è: " + s)  
+
+
+# Esercizio 13
+# Uso di variabili booleane per valutare valori positivi, negativi, nulli e una stringa vuota.
+
+print (bool(1))
+print (bool(0))
+print (bool(-1))
+print (bool(""))
+
+
+
+
+
+
+ 
