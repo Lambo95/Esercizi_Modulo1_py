@@ -217,6 +217,23 @@ print(f"la parola {parola} inizia con {parola[:3]}")
 numero= int(input("Scegli quante volte ripetere "))
 print(f"l'inizio della parola {parola[:3]} ripetuta {numero} volte è \n {parola[:3]*numero}") """
 
+#Boolean
+anni=int(input("Quanti anni hai? "))
+patente=str(input("Hai la patente? (si/no) "))
+res=anni >= 18 and patente == "si"
+print(f"Puoi guidare: {bool(res)}") 
+
+
+utente=str(input("Scegli un utente: Premium o Ritardo "))
+
+if utente == "Premium":
+        print("Puoi entrare in biblioteca")
+elif utente == "Ritardo":
+    print("Non puoi entrare in biblioteca")
+else:
+    print("Hai inserito un valore non valido")   
+
+
 
 
 
