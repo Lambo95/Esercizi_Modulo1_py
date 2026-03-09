@@ -45,29 +45,31 @@ print(f"il tuo numero intero in stringa e' {num_str}") """
 #Esercizi Modulo 1: tipi di dati, casting e variabili
 
 # Esercizio 1 
+
 """ Creare tre variabili: nome (stringa), età (intero) e città (stringa).
 Stampare le variabili. """
-
+"""
 nome = "Lamberto"
 età = 30
 città = "Torino"
 
 print("Mi chiamo ", nome, ", ho ", età, " anni e vivo in ", città)
-
+"""
 
 # Esercizio 2
-""" Creare una variabile x, assegnarle un valore e aggiornarla.
-Stampare il valore prima e dopo l'aggiornamento. """
 
+"""Creare una variabile x, assegnarle un valore e aggiornarla.
+Stampare il valore prima e dopo l'aggiornamento. """
+"""
 x = 2.5
 print("Prima:", x)
 x = 6
 print("Dopo:", x) 
 
-
+"""
 # Esercizio 3
 # Somma di due variabili intere e stampa del risultato.
-
+"""
 x = 12
 y = 18
 print("Somma di", x, "e", y, "=", x + y)  
@@ -159,7 +161,61 @@ print (bool(1))
 print (bool(0))
 print (bool(-1))
 print (bool(""))
+ """
 
+#Stringhe e operazioni
+#Prendi una frase ed invertila e stampala
+""" stringa=str((input("Inserisci una stringa: ")))
+print("Stringa invertita:", stringa[::-1]) """
+
+#Controlla se una frase è un palindromo
+""" frase=str((input("Inserisci una stringa: ")))
+
+if frase == frase[::-1]: #solo uguale errore ...
+    print(f"La frase inserita {frase} e' palindroma")
+else:
+    print(f"La frase inserita {frase} non e' palindroma") """
+    
+#1. Estrarre Primo e Ultimo Carattere:
+#Dichiarazione di una variabile testo e utilizzo della funzione print per stampare il primo e l'ultimo carattere della stringa tramite gli indici 0 e -1.
+""" testo="Prova"
+print(f"La prima lettera della parola {testo} è {testo[0]} l'ultima è {testo[-1]}") """
+
+#2. Convertire in Maiuscolo e Minuscolo:
+#Conversione di una stringa con caratteri misti in tutte lettere maiuscole usando upper() e tutte minuscole con lower().
+""" stringa="TeStO"
+print(f"La parola {stringa} tutta maiuscolo è {stringa.upper()} mentre tutta minuscolo è {stringa.lower()}") """
+
+#3. Contare Occorrenze di una Lettera:
+#Utilizzo del metodo count() per contare quante volte una lettera specifica appare in un testo.
+""" testo= str(input("Inserisci una parola o frase: "))
+lettera= str(input("Scegli una lettera: "))
+
+print(f"In {testo} la lettera {lettera} compare: {testo.count(lettera)}") """
+
+#4. Verificare Inizio e Fine di una Parola:
+#Controllo se una stringa inizia o finisce con una determinata lettera utilizzando startswith() ed endswith().
+""" parola= str(input("Inserisci una parola: "))
+lettera= str(input("Scegli una lettera: "))
+print(f"La {parola} inizia con la lettera {parola[0]} la lettera scelta corrisponde? {parola.startswith(lettera)} e finisce con la lettera {parola[-1]} la lettera scelta corrisponde? {parola.endswith(lettera)}")
+ """
+
+#5. Invertire una Stringa:
+#Utilizzo dello slicing con passo negativo per invertire l'ordine dei caratteri in una stringa.
+""" stringa=str((input("Inserisci una stringa: ")))
+print("Stringa invertita:", stringa[::-1]) """
+
+#6. Rimuovere Spazi Iniziali e Finali:
+#Applicazione della funzione strip() per eliminare gli spazi all'inizio e alla fine di una stringa.
+""" frase= "  Stavo studiando PYTHON la sera   "
+print(frase.strip()) """
+
+#7. Ripetere le Prime Tre Lettere:
+#Estrazione delle prime tre lettere di una parola e ripetizione per tre volte con l'operatore di moltiplicazione delle stringhe.
+""" parola= str(input("Inserisci una parola: "))
+print(f"la parola {parola} inizia con {parola[:3]}")
+numero= int(input("Scegli quante volte ripetere "))
+print(f"l'inizio della parola {parola[:3]} ripetuta {numero} volte è \n {parola[:3]*numero}") """
 
 
 
