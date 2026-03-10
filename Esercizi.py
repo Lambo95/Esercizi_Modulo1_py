@@ -235,12 +235,97 @@ else:
 
 #Operazioni aritmetiche
 
-soldi= float(input("Quanti soldi hai? "))
+""" soldi= float(input("Quanti soldi hai? "))
 prezzo= float(input("Quanto costa l'oggetto? "))
 print(f"Hai {soldi} euro, il prezzo dell'oggetto e' {prezzo} euro, puoi comprare: {soldi//prezzo} oggetti e ti restano {soldi%prezzo} euro")
+ """
+
+#if, elif, else
+
+""" età= int(input("Quanti anni hai? "))
+if età < 18:
+    print("Sei minorenne")
+elif età < 65:
+    print("Sei adulto")
+else:
+    print("Sei anziano") """
+
+# Esercizio 1: Controllo Multiplo di 3
+# Verifica se un numero è multiplo di 3 utilizzando l'operatore modulo.
+
+""" numero=int(input("inserisci un numero: "))
+if numero % 3 == 0:
+    print(f"{numero} e' multiplo di 3")
+else:
+    print(f"{numero} non e' multiplo di 3") """
+    
+# Esercizio 2: Verifica Voto Sufficiente
+# Controllo se il voto inserito è sufficiente (>= 18).
+
+""" voto=int(input("Inserisci il tuo voto: "))
+if voto >= 18:
+    print(f"Voto sufficiente: {voto}")
+else:
+    print(f"Voto insufficiente: {voto}") """
+
+# Esercizio 3: Vocale o Consonante
+# Distingui se un carattere è una vocale o consonante tramite le strutture condizionali.
+""" lettera=str(input("Inserisci una lettera: "))
+if lettera in "aeiou":
+    print(f"{lettera} e' una vocale")
+else:
+    print(f"{lettera} e' una consonante") """
+
+# Esercizio 4: Numero Positivo, Negativo o Zero
+# Determina se un numero è positivo, negativo o zero.
+
+""" numero=int(input("Inserisci un numero: "))
+if numero > 0:
+    print(f"{numero} e' positivo")
+elif numero < 0:
+    print(f"{numero} e' negativo")
+else:
+    print(f"{numero} e' zero") """
+    
+# Esercizio 5: Maggiore tra Tre Numeri
+# Trova il numero maggiore tra tre variabili.
+
+""" a=int(input("Inserisci un numero: "))
+b=int(input("Inserisci un numero: "))
+c=int(input("Inserisci un numero: "))
+
+if a > b and a > c:
+    print(f"{a} e' il numero maggiore")
+elif b > a and b > c:
+    print(f"{b} e' il numero maggiore")
+else:
+    print(f"{c} e' il numero maggiore") """
+
+# Esercizio 6: Calcolo Prezzo Biglietto
+# Calcola il prezzo del biglietto in base all'età:
+""" Sotto i 12 anni: 5 euro
+    Tra i 13 e i 64 anni: 10 euro
+    Oltre i 65 anni: 7 euro """
+    
+""" eta=int(input("Quanti anni hai? "))
+
+if eta < 12:
+    print("Il prezzo del biglietto e' 5 euro")
+elif eta < 65:
+    print("Il prezzo del biglietto e' 10 euro")
+else:
+    print("Il prezzo del biglietto e' 7 euro") """
 
 
+# Esercizio 7: Classificazione Triangoli
+# Identifica se un triangolo è equilatero, isoscele, o scaleno basandoti sulle lunghezze dei suoi lati.
+""" a=input("Inserisci la lunghezza del primo lato del triangolo: ")
+b=input("Inserisci la lunghezza del secondo lato del triangolo: ")
+c=input("Inserisci la lunghezza del terzo lato del triangolo: ")
 
-
-
- 
+if a == b == c:
+    print("Il triangolo e' equilatero")
+elif a == b or b == c or a == c:
+    print("Il triangolo e' isoscele")
+else:
+    print("Il triangolo e' scaleno") """
