@@ -329,3 +329,174 @@ elif a == b or b == c or a == c:
     print("Il triangolo e' isoscele")
 else:
     print("Il triangolo e' scaleno") """
+
+#ciclo while
+
+""" numero=int(input("Inserisci un numero o 0 per uscire: "))
+while numero != 0:
+       
+    if numero % 2 == 0:
+        print(f"{numero} e' pari")
+    else:
+        print(f"{numero} e' dispari")
+
+    numero=int(input("Inserisci un numero \n o inserisci 0 per uscire: "))
+print("Esci") """
+
+""" Esercizio 1: Contare da 1 a 5
+Dichiarare i = 1
+Inserire ciclo while i <= 5
+Stampare i e incrementare i """
+
+""" i=1
+while i<=5:
+    print(i)
+    i+=1 """
+
+""" Esercizio 2: Contare numeri pari da 2 a 10
+Dichiarare i = 2
+Inserire ciclo while i <= 10
+Stampare i e incrementare di 2 """
+""" i=2
+while i<=10:
+    print(i)
+    i+=2 """
+
+""" Esercizio 3: Sommare numeri da 1 a 10
+Dichiarare i = 1 e somma = 0
+Inserire ciclo while i <= 10
+Incrementare somma e stampare il risultato """
+""" i=1
+somma=0
+while i<=10:
+    somma+=i
+    print("Somma =", somma, i)
+    i+=1
+
+     """
+
+""" Esercizio 4: Stampare tabellina di un numero
+Dichiarare n = 7 e i = 1
+Stampare tabellina fino a i = 10 """
+
+""" n=7
+i=1
+while i<=10:
+    print(f"{n} x {i} = {n*i}")
+    i+=1 """
+    
+""" Esercizio 5: Somma dei numeri inseriti dall'utente
+Richiede all'utente di inserire numeri finché non digita 0
+Calcolare e stampare la somma totale """
+""" numero=int(input("Inserisci un numero o premi 0 per uscire :"))
+somma =0
+while numero != 0:
+    somma += numero
+    print(f"La somma del numeri inseriti è {somma}")
+    numero=int(input("Inserisci un numero o premi 0 per uscire :"))
+print(f"Somma finale: {somma} -- Sei uscito") """
+    
+
+""" Esercizio 6: Indovinare il numero
+Variabile segreto = 7
+L'utente deve indovinare il numero con tentativi successivi """
+""" numero=int(input("Indovina il numero:"))
+segreto=7
+while numero!=segreto:
+    print(f"Il numero {numero} non è quello corretto! Ritenta")
+    numero=int(input("Indovina il numero:"))
+print("Hai vinto! -- Esci") """
+
+""" Esercizio 7: Stampare numeri dispari fino a 15
+Dichiarare i = 1
+Incrementare di 2 ogni iterazione per stampare i numeri dispari """
+""" i=1
+while i<=15:
+    print(i)
+    i+=2  """
+
+""" Esercizio per gli studenti
+Calcolare la somma delle cifre di un numero """
+""" numero_str=str(input("Inserisci un numero:"))
+str_len= len(numero_str)
+print(str_len)
+i=0
+somma=0
+while i<str_len:
+    somma+=int(numero_str[i])
+    print(somma)
+    i+=1 """
+
+#ciclo FOR
+""" nomi=["Giuseppe", "Giorgio", "Giovanni", "Gianluca"]
+for i, val in enumerate(nomi):
+    print(i, val) """
+    
+""" Stampa dei Numeri da 1 a 10
+Usa for i in range(1, 11) per stampare i numeri da 1 a 10. """
+""" for i in range(1, 11):
+    print(i) """
+
+""" Stampa dei Numeri Pari da 1 a 20
+Utilizza for i in range(2, 21, 2) per stampare i numeri pari. Questo sfrutta l'incremento di 2. """
+""" for i in range(2, 21, 2):
+    print(i) """
+
+""" Stampa di Ogni Lettera di una Parola
+Assegna una parola a una variabile e usa for c in parola per stampare ogni carattere singolarmente. """
+""" parola=str(input("Inserisci una parola:"))
+for c in parola:
+    print(c) """
+
+""" Somma dei Numeri da 1 a 100
+Dichiarare una variabile somma e usare un ciclo for per calcolare e stampare la somma totale. """
+""" somma=0
+for i in range(1,100): #perché 101?
+    somma+=i
+print(somma) """
+
+""" Stampa della Tabellina del 3
+Stampare la tabellina del 3 utilizzando un ciclo for. """
+""" for i in range(3,31,3):
+    print(i) """
+
+""" Calcolo del Fattoriale di un Numero
+Dichiarare variabili per il numero e il fattoriale e calcolare il fattoriale usando for.
+ """
+""" n = 5
+fattoriale = 1
+for i in range(1, n+1):
+    fattoriale *= i
+    print(fattoriale)
+print("Fattoriale =", fattoriale) """
+ 
+""" Conteggio delle Vocali in una Parola
+Dichiarare una parola e contare le vocali presenti utilizzando for con una condizione if. """
+""" parola=str(input("Inserisci una parola:"))
+count=0
+vocali= ["a", "e", "i", "o", "u"]
+for v in parola:
+    if v in vocali:
+        count +=1
+print(f"La parola {parola} ha {count} vocali") """
+
+""" Stampa di una Matrice 3x3
+Utilizzare cicli for annidati per stampare una matrice 3x3. """ #da vedere
+""" for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j, end="  ")
+    print() """
+
+""" Uso di Operatore Continue
+Stampare i numeri da 1 a 10 saltando il 5 con if e continue. """
+""" for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i) """
+
+""" Uso di Operatore Break
+Stampare i numeri da 1 a 10 e fermarsi al 7 includendo il 7 con if e break. """
+""" for i in range(1, 11):
+    if i == 7:
+        break
+    print(i) """
