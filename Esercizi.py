@@ -526,3 +526,42 @@ for i in range(len(colori)):
             duplicati += 1
 
 print(duplicati) """
+
+
+#set
+""" Immaginiamo due corsi universitari: Corso A e Corso B.
+Vogliamo sapere:
+· Chi frequenta entrambi i corsi. #&
+· Chi frequenta solo il corso A.
+. Chi frequenta solo il corso B.
+· Chi frequenta almeno un corso. ?
+· Quanti studenti unici ci sono in totale. |"""
+
+""" corso_a = {"Paolo","Gianluca","Marco","Anna"}
+corso_b = {"Mario", "Paolo", "Anna", "Teresa"}
+
+print(f"{corso_a & corso_b} frequentano entrambi i corsi")
+print(f"{corso_a-corso_b} frequntano solo il corso A")
+print(f"{corso_b-corso_a} frequentano solo il corso B")
+
+print(f"Glis tudenti dei corsi sono: {corso_a|corso_b}") """
+
+#Dizionari
+""" Crea un dizionario che rappresenti uno studente con le
+seguenti chiavi: "nome", "età" e "corso". Poi:
+· Modifica il valore di "età".
+· Aggiungi una nuova chiave "matricola".
+· Usa get() per recuperare un valore sconosciuto senza
+errore.
+· Itera su tutte le coppie chiave-valore e stampale.
+ """
+ 
+studente={"nome": "Giovanni","Età":32,"Corso":"Python"}
+studente["Età"]="26"
+studente["matricola"]=1
+
+studente.get("classe")
+
+for chiave, val in studente.items():
+    print(chiave, val)
+
