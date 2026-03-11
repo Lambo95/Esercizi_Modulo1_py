@@ -510,3 +510,19 @@ lista.remove(3)
 lista.insert(2, 100)
 
 print(lista) """
+
+#tuple
+#Creare una tupla con 3 colori, stampa il primo e l'ultimo, conta quante volte compare in colore
+
+""" colori=("giallo", "giallo","rosso")
+print(colori[0], colori[-1])
+duplicati = 0
+
+for i in range(len(colori)):
+    print(i)
+    for j in range(i + 1, len(colori)):
+        print(j)
+        if colori[i] == colori[j]:
+            duplicati += 1
+
+print(duplicati) """
