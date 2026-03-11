@@ -500,3 +500,13 @@ Stampare i numeri da 1 a 10 e fermarsi al 7 includendo il 7 con if e break. """
     if i == 7:
         break
     print(i) """
+    
+#Liste
+# Creare una lista con cinque numeri, aggiungere un numero alla fine, sostituire il terzo numero e stampare la lista finale.
+
+""" lista =[1,2,3,4,5]
+lista.append(6)
+lista.remove(3)
+lista.insert(2, 100)
+
+print(lista) """
