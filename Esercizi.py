@@ -565,7 +565,8 @@ studente.get("classe")
 for chiave, val in studente.items():
     print(chiave, val)
  """
- 
+#Dizionari, set e tuple
+
 """  Esercizio 1: Somma dei numeri pari in una lista
 Creare una lista di numeri.
 Calcolare la somma dei numeri pari utilizzando un ciclo for e l'operatore modulo.
@@ -624,16 +625,68 @@ print(dizionario_tupla) """
 Sommare gli elementi all'interno di una lista di tuple.
 Utilizzare la funzione sum() e un ciclo for.
 Stampa della somma totale. """
-tupla_lista=[(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+""" tupla_lista=[(1, 2, 3), (4, 5, 6), (7, 8, 9)]
 somma=0
 for tupla in tupla_lista:
     somma+=sum(tupla)
-print(somma)    
+print(somma)     """
 
 
 """ Esercizio 7: Tuple con massimo e minimo di una lista
 Creare una dupla contenente il minimo e il massimo di una lista.
 Utilizzare le funzioni min() e max() per ottenere i valori.
 Stampa della dupla risultante. """
-tupla_lista=(1,3,5,8,9)
-print(min(tupla_lista), max(tupla_lista))
+""" tupla_lista=(1,3,5,8,9)
+print(min(tupla_lista), max(tupla_lista)) """
+
+
+""" Ordinare una Lista di Tuple
+Abbiamo creato una lista di tuple e l'abbiamo ordinata per il secondo elemento di ciascuna. 
+Abbiamo usato la funzione sorted con una lambda per specificare il criterio d'ordinamento. """
+nomi_eta=[("Giovanni", 32), ("Paolo", 26), ("Luigi", 19), ("Teresa", 32)]
+nomi_eta_ordinata=sorted(nomi_eta, key=lambda eta: eta[1])
+print(nomi_eta_ordinata)
+
+""" Creare una Tupla con Numeri Pari
+Partendo da una tupla di numeri, abbiamo estratto i numeri pari per formare una nuova tupla. """
+tupla=(1,2,3,4,5,6,7,8,9)
+tupla_pari=tuple(n for n in tupla if n % 2 ==0)
+print(tupla_pari)
+
+""" Invertire una Tupla
+Abbiamo dimostrato come si inverte una tupla utilizzando la funzione reversed """
+tupla=(1,2,3,4,5,6,7,8,9)
+tupla_invertita= tuple(reversed(tupla))
+print(tupla_invertita)
+
+""" Conversione di Stringa in Tupla di Caratteri Unici
+Abbiamo convertito una stringa in una tupla contenente solo i caratteri unici utilizzando l'oggetto set. """
+stringa="Ciao, come stai?"
+tupla_caratteri=tuple(set(stringa.lower()))
+print(tupla_caratteri)
+
+""" Zippare Due Liste in una Lista di Tuple
+Abbiamo combinato due liste in una lista di tuple utilizzando la funzione zip. """
+lista_1=["Chiara", "Marco", "Luca"]
+lista_2=["Paolo","Franco","Roberto"]
+
+lista_combinata=list(zip(lista_1,lista_2))
+print(lista_combinata)
+
+""" Differenza Simmetrica tra Set
+Abbiamo calcolato la differenza simmetrica tra vari set creando un nuovo set contenente elementi unici di ciascun insieme. """
+
+A = {1, 2, 3}
+B = {3, 4, 5}
+C = {5, 6}
+diff = A ^ B ^ C
+print("Diff simmetrica:", diff)
+
+""" Filtrare Parole Uniche in una Frase
+Dalla frase data, abbiamo creato un set di parole uniche utilizzando split e set. """
+frase="Ciao, come va? Ciao, tutto bene ed a te come va?"
+parole_uniche=set(frase.split())
+print(parole_uniche)
+
+""" Unione di Set da Lista di Liste
+Abbiamo mostrato come unire diverse liste di numeri in un unico set senza duplicati. """
