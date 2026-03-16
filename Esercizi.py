@@ -555,7 +555,7 @@ seguenti chiavi: "nome", "età" e "corso". Poi:
 errore.
 · Itera su tutte le coppie chiave-valore e stampale.
  """
- 
+""" 
 studente={"nome": "Giovanni","Età":32,"Corso":"Python"}
 studente["Età"]="26"
 studente["matricola"]=1
@@ -564,4 +564,76 @@ studente.get("classe")
 
 for chiave, val in studente.items():
     print(chiave, val)
+ """
+ 
+"""  Esercizio 1: Somma dei numeri pari in una lista
+Creare una lista di numeri.
+Calcolare la somma dei numeri pari utilizzando un ciclo for e l'operatore modulo.
+Stampa del risultato. """
+""" numeri=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+for n in numeri:
+    if n%2 == 0:
+        n+=n
+        print(n)
+print(n)
+         """
 
+""" Esercizio 2: Creare una lista senza duplicati
+Creazione di una lista con duplicati.
+Utilizzando un ciclo for per creare una nuova lista senza duplicati mantenendo l'ordine.
+Stampa del risultato. """
+""" lista_duplicati = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lista_senza_duplicati = []
+for n in lista_duplicati:
+    if n not in lista_senza_duplicati:
+        lista_senza_duplicati.append(n)
+print("Lista senza duplicati:", lista_senza_duplicati) """
+
+
+""" Esercizio 3: Rotazione di una lista
+Rotare una lista di k posizioni a destra.
+Utilizzo di slicing per ottenere la lista ruotata.
+Stampa del risultato. """
+
+""" lista = [1, 2, 3, 4, 5]
+k = 2
+rotata = lista[k:] + lista[:k]
+print("Lista rotata:", rotata) """
+
+
+""" Esercizio 4: Intersezione di due liste
+Creare due liste.
+Trovare l'intersezione tra le due liste senza utilizzare set.
+Stampa dell'intersezione. """
+
+""" lista_1 =[1,2,3,4,5,6] 
+lista_2 =[6,7,8,9,10]
+
+intersezione = [n for n in lista_1 if n in lista_2]
+print("Intersezione:", intersezione) """
+
+""" Esercizio 5: Conversione di una lista di tuple in dizionario
+Data una lista di tuple, convertirla in un dizionario.
+Utilizzare la funzione dict() per effettuare la conversione.
+Stampa del dizionario risultante. """
+""" lista_tupla=[("a", 1), ("b", 2), ("c", 3)]
+dizionario_tupla= dict(lista_tupla)
+print(dizionario_tupla) """
+
+""" Esercizio 6: Somma di tutte le tuple
+Sommare gli elementi all'interno di una lista di tuple.
+Utilizzare la funzione sum() e un ciclo for.
+Stampa della somma totale. """
+tupla_lista=[(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+somma=0
+for tupla in tupla_lista:
+    somma+=sum(tupla)
+print(somma)    
+
+
+""" Esercizio 7: Tuple con massimo e minimo di una lista
+Creare una dupla contenente il minimo e il massimo di una lista.
+Utilizzare le funzioni min() e max() per ottenere i valori.
+Stampa della dupla risultante. """
+tupla_lista=(1,3,5,8,9)
+print(min(tupla_lista), max(tupla_lista))
