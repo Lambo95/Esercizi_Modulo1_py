@@ -643,50 +643,132 @@ print(min(tupla_lista), max(tupla_lista)) """
 """ Ordinare una Lista di Tuple
 Abbiamo creato una lista di tuple e l'abbiamo ordinata per il secondo elemento di ciascuna. 
 Abbiamo usato la funzione sorted con una lambda per specificare il criterio d'ordinamento. """
-nomi_eta=[("Giovanni", 32), ("Paolo", 26), ("Luigi", 19), ("Teresa", 32)]
+""" nomi_eta=[("Giovanni", 32), ("Paolo", 26), ("Luigi", 19), ("Teresa", 32)]
 nomi_eta_ordinata=sorted(nomi_eta, key=lambda eta: eta[1])
-print(nomi_eta_ordinata)
+print(nomi_eta_ordinata) """
 
 """ Creare una Tupla con Numeri Pari
 Partendo da una tupla di numeri, abbiamo estratto i numeri pari per formare una nuova tupla. """
-tupla=(1,2,3,4,5,6,7,8,9)
+""" tupla=(1,2,3,4,5,6,7,8,9)
 tupla_pari=tuple(n for n in tupla if n % 2 ==0)
-print(tupla_pari)
+print(tupla_pari) """
 
 """ Invertire una Tupla
 Abbiamo dimostrato come si inverte una tupla utilizzando la funzione reversed """
-tupla=(1,2,3,4,5,6,7,8,9)
+""" tupla=(1,2,3,4,5,6,7,8,9)
 tupla_invertita= tuple(reversed(tupla))
-print(tupla_invertita)
+print(tupla_invertita) """
 
 """ Conversione di Stringa in Tupla di Caratteri Unici
 Abbiamo convertito una stringa in una tupla contenente solo i caratteri unici utilizzando l'oggetto set. """
-stringa="Ciao, come stai?"
+""" stringa="Ciao, come stai?"
 tupla_caratteri=tuple(set(stringa.lower()))
-print(tupla_caratteri)
+print(tupla_caratteri) """
 
 """ Zippare Due Liste in una Lista di Tuple
 Abbiamo combinato due liste in una lista di tuple utilizzando la funzione zip. """
-lista_1=["Chiara", "Marco", "Luca"]
+""" lista_1=["Chiara", "Marco", "Luca"]
 lista_2=["Paolo","Franco","Roberto"]
 
 lista_combinata=list(zip(lista_1,lista_2))
-print(lista_combinata)
+print(lista_combinata) """
 
 """ Differenza Simmetrica tra Set
 Abbiamo calcolato la differenza simmetrica tra vari set creando un nuovo set contenente elementi unici di ciascun insieme. """
 
-A = {1, 2, 3}
+""" A = {1, 2, 3}
 B = {3, 4, 5}
 C = {5, 6}
 diff = A ^ B ^ C
-print("Diff simmetrica:", diff)
+print("Diff simmetrica:", diff) """
 
 """ Filtrare Parole Uniche in una Frase
 Dalla frase data, abbiamo creato un set di parole uniche utilizzando split e set. """
-frase="Ciao, come va? Ciao, tutto bene ed a te come va?"
+""" frase="Ciao, come va? Ciao, tutto bene ed a te come va?"
 parole_uniche=set(frase.split())
-print(parole_uniche)
+print(parole_uniche) """
 
 """ Unione di Set da Lista di Liste
 Abbiamo mostrato come unire diverse liste di numeri in un unico set senza duplicati. """
+""" liste = [[1, 2, 3], [3, 4, 5], [6, 7]]
+unione = set().union(*map(set, liste))
+print("Unione:", unione) """
+
+""" Esercizio 1: Operazioni con i Set
+Creazione di variabili set e esecuzione di operazioni di intersezione, differenza e conteggio degli elementi unici. """
+""" set_1={1,2,3,4,5}
+set_2={4,5,6,7,8}
+
+intersezione=set(set_1&set_2)
+print(intersezione)
+differenza=set(set_1-set_2)
+print(differenza)
+cont_elementi=(len(set_1 | set_2))
+print(cont_elementi) """
+
+""" Esercizio 2: Generazione di Numeri Casuali
+Uso della libreria random per generare set di numeri casuali e stampa dei risultati. """
+""" import random
+
+s_numeri= {random.randint(1,150) for _ in range(10)} #me né aspettavo 9..
+print(s_numeri) """
+
+""" Esercizio 3: Conteggio delle Occorrenze delle Parole
+Conta delle occorrenze di parole in una frase utilizzando dizionari? e le funzioni split e get. """
+""" frase = "Ciao, come va? Ciao, tutto bene ed a te come va?"
+
+frase = frase.replace(",", "").replace("?", "")
+
+parole = frase.split()
+
+conteggio = {}
+
+for parola in parole:
+    parola = parola.lower()
+    conteggio[parola] = conteggio.get(parola, 0) + 1
+
+print(conteggio) """
+    
+
+
+""" Esercizio 4: Inversione di Chiavi e Valori nei Dizionari
+Inversione di chiavi e valori in un dizionario con un ciclo for e la funzione items. """
+""" nomi_eta={"Paolo": 30, "Giulia": 25, "Maria": 28, "Giuseppe": 32}
+#nomi_eta_invertito={}
+nomi_eta_invertito={valore: chiave for chiave, valore in nomi_eta.items()} """
+
+
+""" for chiave, valore in nomi_eta.items():
+    nomi_eta_invertito[valore]=chiave"""
+""" print(nomi_eta_invertito)  """
+
+""" Esercizio 5: Creazione di un Dizionario da Due Liste
+Utilizzo di dict e zip per creare un dizionario da due liste di chiavi e valori. """
+lista_chiavi = ["A", "B", "C", "D", "E"]
+lista_valori = [1, 2, 3, 4, 5]
+dizionario = dict(zip(lista_chiavi, lista_valori))
+print(dizionario)
+
+""" Esercizio 6: Raggruppamento per Lunghezza delle Parole
+Raggruppare le parole in base alla loro lunghezza usando un dizionario vuoto iniziale e la funzione setdefault. """
+""" frase="Mi piace il cibo, ma non mi piace la cucina"
+parole=frase.split()
+dizionario={}
+for parola in parole:
+    lunghezza=len(parola)
+    dizionario.setdefault(lunghezza, []).append(parola)
+print(dizionario) """
+
+""" Esercizio 7: Frequenza delle Lettere in una Parola
+Calcolare la frequenza di ciascuna lettera in una parola utilizzando un dizionario vuoto e un ciclo for. """
+
+""" frase_1 = "Ciao, come va? Ciao, tutto bene ed a te come va?"
+
+frase_1 = frase_1.replace(",", "").replace("?", "")
+
+conteggio = {}
+
+for c in frase_1.lower():
+    conteggio[c] = conteggio.get(c, 0) + 1
+
+print(conteggio) """
