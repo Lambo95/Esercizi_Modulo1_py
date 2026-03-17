@@ -744,11 +744,11 @@ nomi_eta_invertito={valore: chiave for chiave, valore in nomi_eta.items()} """
 
 """ Esercizio 5: Creazione di un Dizionario da Due Liste
 Utilizzo di dict e zip per creare un dizionario da due liste di chiavi e valori. """
-lista_chiavi = ["A", "B", "C", "D", "E"]
+""" lista_chiavi = ["A", "B", "C", "D", "E"]
 lista_valori = [1, 2, 3, 4, 5]
 dizionario = dict(zip(lista_chiavi, lista_valori))
 print(dizionario)
-
+ """
 """ Esercizio 6: Raggruppamento per Lunghezza delle Parole
 Raggruppare le parole in base alla loro lunghezza usando un dizionario vuoto iniziale e la funzione setdefault. """
 """ frase="Mi piace il cibo, ma non mi piace la cucina"
@@ -772,3 +772,247 @@ for c in frase_1.lower():
     conteggio[c] = conteggio.get(c, 0) + 1
 
 print(conteggio) """
+
+#Fuonzioni
+""" Esercizio :Definisci una funzione chiamata media che:
+· Riceve una lista di numeri (parametro)
+· Calcola e restituisce la media (somma/numero elementi)
+
+Ad esempio:
+print(media([2, 4, 6])) # Stampa 4
+
+Usa len() e sum() per renderla semplice, leggibile ed efficace. """
+""" def media(*args):
+    return sum(args)/len(args)
+
+numeri=int(input("Inserisci numero o premi 0 per uscire: "))
+
+lista_numeri=[]
+while (numeri != 0):
+    lista_numeri.append(numeri)
+    numeri=int(input("Inserisci numero o premi 0 per uscire: "))
+    
+print(f"La lista di numeri è {lista_numeri} la cui media è {media(*lista_numeri)}") """
+
+#Creazione agenda
+""" Aggiungi Contatto
+Crea un contatto sotto forma di dizionario con nome, numero e email.
+Aggiunge il contatto alla lista della rubrica. """
+
+""" agenda={}
+def aggiungi_contatto():
+    print("*************Aggiungi nuovo contatto*****************")
+    nome=str(input("Inserisci nome: "))
+    numero=int(input("Inserisci numero: "))
+    mail=str(input("Inserisci mail: "))
+    
+    agenda[nome] = {"numero": numero, "mail": mail}
+    print("Contatto aggiunto!") """
+
+""" Modifica Contatto
+Cerca un contatto nella rubrica per nome.
+Modifica il numero o l'email del contatto, se specificato. """
+""" def modifica_contatto():
+    print("************* Modifica contatto *****************")
+    nome = input("Quale contatto vuoi modificare? Inserisci il nome: ")
+
+    if nome not in agenda:
+        print("Contatto non trovato.")
+        return
+
+    print(f"Contatto attuale: {agenda[nome]}")
+
+    print("Modifica:")
+    numero = input("Inserisci nuovo numero: ")
+    mail = input("Inserisci nuova mail: ")
+
+    agenda[nome]["numero"] = numero
+    agenda[nome]["mail"] = mail
+
+    print("Contatto modificato con successo!") """
+
+""" Elimina Contatto
+Rimuove un contatto dalla rubrica per nome. """
+""" def elimina_contatto():
+    print("************* Elimina contatto *****************")
+    nome = input("Quale contatto vuoi eliminare? Inserisci il nome: ")
+
+    if nome not in agenda:
+        print("Contatto non trovato.")
+        return
+
+    print(f"Contatto selezionato: {agenda[nome]}")
+
+    conferma = input(f"Sei sicuro di voler eliminare {nome}? (s/n): ").lower()
+
+    if conferma == "s":
+        agenda.pop(nome)
+        print("Contatto eliminato con successo!")
+    else:
+        print("Nessuna operazione effettuata.") """
+
+""" Cerca Contatto
+Cerca un contatto nella rubrica e stampa i suoi dettagli. """
+""" def visualizza_contatto():
+    print("************* Contatto *****************")
+    nome = input("Quale contatto vuoi visualizzare? Inserisci il nome: ")
+
+    if nome not in agenda:
+        print("Contatto non trovato.")
+        return
+
+    print(f"Contatto selezionato: {agenda[nome]}")
+ """
+
+""" Mostra Contatti
+Visualizza tutti i contatti presenti nella rubrica in ordine alfabetico. """
+#def chiama_menu():
+""" Funzione che stampa il menu' e chiama la funzione scelta """
+   # print("***************** Agenda V 1.0.0 ********************")
+    #print("Ciao, cosa vuoi fare?\n")
+
+"""  while True:
+        menu = int(input(
+            "Premi: \n"
+            " 1 per aggiungere contatto \n"
+            " 2 per modificare contatto \n"
+            " 3 per eliminare contatto \n"
+            " 4 per cercare contatto \n"
+            " 5 per vedere i contatti esistenti \n"
+            " 0 per uscire: "
+        ))
+
+        scelta(menu) """
+
+""" if menu == 0:
+            break
+def scelta(menu):
+    match menu:
+        case 1:
+            aggiungi_contatto()
+        case 2:
+            modifica_contatto()
+        case 3:
+            elimina_contatto()
+        case 4:
+            visualizza_contatto()
+        case 5:
+            print("Contatti esistenti:")
+            print(agenda)
+        case 0:
+            print("Uscita dal programma")
+        case _:
+            print("Scelta non valida")
+
+chiama_menu() """
+
+#funzioni
+#Scrivere un programma che analizzi un testo.
+#Calcolare il numero totale di parole.
+#Calcolare la frequenza di ciascuna parola.
+#Estrarre le parole uniche utilizzando un set.
+#Mostrare le cinque parole più frequenti.
+#Calcolare la lunghezza media delle parole.
+#Funzioni Implementate
+
+""" testo_analisi=str(input("Inserisci il testo da analizzare: ")) """
+
+#puliscitesto: Riceve una stringa e rimuove i simboli di punteggiatura, trasformando il testo in minuscolo.
+""" def pulisci_testo(testo):
+    simboli = ",?!.:;"
+    for s in simboli:
+        testo = testo.replace(s, "")
+    return testo.lower() """
+
+
+#contaparole: Divide il testo in una lista di parole e restituisce il numero totale.
+""" def conta_parole(testo):
+    testo = pulisci_testo(testo)
+    parole = testo.split()
+    return len(parole)
+
+
+dizionario={} """
+
+#frequenza_parole: Calcola e restituisce un dizionario con la frequenza di ciascuna parola nel testo.
+""" def frequenza_parole(testo):
+    testo = pulisci_testo(testo)
+    parole = testo.split()
+    diz = {}
+
+    for p in parole:
+        diz[p] = diz.get(p, 0) + 1
+
+    return diz
+ """
+
+#parole_uniche: Restituisce un insieme di parole uniche dal testo. 
+""" def parole_uniche(testo):
+    testo = pulisci_testo(testo)
+    parole = testo.split()
+    return set(parole) """
+
+
+#top_n_parole: Ordina le parole per frequenza in ordine decrescente e restituisce le prime n parole.        
+""" def top_n_parole(testo, n):
+    diz = frequenza_parole(testo)
+    ordinate = sorted(diz.items(), key=lambda x: x[1], reverse=True)
+    return ordinate[:n] """
+
+        
+#lunghezza_media: Calcola la lunghezza media delle parole nel testo pesata per la frequenza.    
+""" def lunghezza_media(testo):
+    testo = pulisci_testo(testo)
+    parole = testo.split()
+    somma = sum(len(p) for p in parole)
+    media = somma / len(parole)
+    return media """
+
+""" def menu():
+    testo = input("Inserisci il testo da analizzare: ")
+
+    while True:
+        print("\n--- MENU ANALISI TESTO ---")
+        print("1) Conta parole")
+        print("2) Parole uniche")
+        print("3) Frequenza parole")
+        print("4) Top N parole")
+        print("5) Lunghezza media parole")
+        print("0) Esci")
+
+        scelta = input("Scegli un'opzione: ")
+
+        if scelta == "1":
+            print("Numero totale di parole:", conta_parole(testo))
+
+        elif scelta == "2":
+            print("Parole uniche:", parole_uniche(testo))
+
+        elif scelta == "3":
+            print("Frequenza parole:", frequenza_parole(testo))
+
+        elif scelta == "4":
+            n = int(input("Quante parole vuoi visualizzare? "))
+            print("Top", n, "parole:", top_n_parole(testo, n))
+
+        elif scelta == "5":
+            print("Lunghezza media delle parole:", lunghezza_media(testo))
+
+        elif scelta == "0":
+            print("Uscita dal programma.")
+            break
+
+        else:
+            print("Scelta non valida. Riprova.")
+
+menu() """
+
+        
+    
+
+
+
+
+
+
+
